@@ -25,7 +25,9 @@ namespace MyCodeLibrary
         private string GetWebPage(string url)
         {
             WebClient client = new WebClient();
-            return client.DownloadString(url);
+            string content = client.DownloadString(url);
+            content += "That's all folks!";
+            return content;
         }
     }
 }
